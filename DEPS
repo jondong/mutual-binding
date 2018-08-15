@@ -25,3 +25,18 @@ deps = {
   'src/third_party/dart': Var('dart_git') + '/sdk.git' + '@' + Var('dart_revision'),
   'src/third_party/tonic': Var('fuchsia_git') + '/tonic' + '@' + Var('tonic_revision'),
 }
+
+recursedeps = [
+  'src/buildtools',
+]
+
+hooks = [
+  {
+    'name': 'buildtools',
+    'pattern': '.',
+    'action': [
+      'python',
+      'src/tools/buildtools/update.py',
+    ],
+  }
+]
