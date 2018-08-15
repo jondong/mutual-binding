@@ -40,5 +40,11 @@ hooks = [
       'python',
       'src/tools/buildtools/update.py',
     ],
-  }
+  },
+  {
+    'name': 'dart',
+    'pattern': '.',
+    'cwd': 'src/',
+    'action': ['python', 'src/tools/dart/update.py'],
+  },
 ]
