@@ -5,7 +5,7 @@ vars = {
   'github_jondong': 'https://github.com/jondong',
 
   # Revisions
-  'buildroot_revision': '4fd7a273',
+  'buildroot_revision': 'd436c65',
   'buildtool_revision': 'ae8541069',
   'gyp_revision': '4801a5331a',
   'v8_revision': '022206d5',
