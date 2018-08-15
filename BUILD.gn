@@ -4,6 +4,10 @@
 
 group("mutual_binding") {
   testonly = true
+
+  public_deps = [
+    "//third_party/dart:create_sdk",
+  ]
 }
 
 config("config") {
