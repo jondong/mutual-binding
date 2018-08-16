@@ -34,6 +34,13 @@ recursedeps = [
 
 hooks = [
   {
+    'name': 'download_android_tools',
+    'pattern': '.',
+    'action': [
+      'python', 'src/tools/android/download_android_tools.py',
+    ],
+  },
+  {
     'name': 'buildtools',
     'pattern': '.',
     'action': [
@@ -44,14 +51,6 @@ hooks = [
   {
     'name': 'dart',
     'pattern': '.',
-    'cwd': 'src/',
     'action': ['python', 'src/tools/dart/update.py'],
-  },
-  {
-    'name': 'download_android_tools',
-    'pattern': '.',
-    'action': [
-      'python', 'src/tools/android/download_android_tools.py',
-    ],
   },
 ]
