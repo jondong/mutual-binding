@@ -2,11 +2,13 @@
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-group("mutual_binding") {
+import ("$mutual_binding_root/common/config.gni")
+
+group("mutual-binding") {
   testonly = true
 
   public_deps = [
-    "//third_party/dart:create_sdk",
+    "//third_party/dart:runtime",
   ]
 }
 

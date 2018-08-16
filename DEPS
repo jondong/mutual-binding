@@ -11,6 +11,10 @@ vars = {
   'v8_revision': '022206d5',
   'dart_revision': '08f59e5de',
   'tonic_revision': '57d508b12',
+  'dart_dartdoc_tag': 'v0.20.2',
+  'dart_crypto_tag': '2.0.6',
+  'dart_boringssl_gen_rev': 'fc47eaa1a2',
+  'dart_observatory_pub_packages_rev': '089412217',
 }
 
 allowed_hosts = [
@@ -26,6 +30,10 @@ deps = {
   'src/third_party/v8': Var('chromium_git') + '/v8/v8' + '@' + Var('v8_revision'),
   'src/third_party/dart': Var('dart_git') + '/sdk.git' + '@' + Var('dart_revision'),
   'src/third_party/tonic': Var('fuchsia_git') + '/tonic' + '@' + Var('tonic_revision'),
+  'src/third_party/boringssl': 'https://github.com/dart-lang/boringssl_gen.git' + '@' + Var('dart_boringssl_gen_rev'),
+  'src/third_party/dart/third_party/observatory_pub_packages': Var('dart_git') + '/observatory_pub_packages.git' + '@' + Var('dart_observatory_pub_packages_rev'),
+  'src/third_party/dart/third_party/pkg/dartdoc': Var('dart_git') + '/dartdoc.git' + '@' + Var('dart_dartdoc_tag'),
+  'src/third_party/dart/third_party/pkg/crypto.git': Var('dart_git') + '/crypto.git' + '@' + Var('dart_crypto_tag'),
 }
 
 recursedeps = [

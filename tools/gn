@@ -77,13 +77,13 @@ def to_gn_args(args):
     gn_args = {}
 
     # Skia GN args.
-    gn_args['skia_enable_flutter_defines'] = True # Enable Flutter API guards in Skia.
-    gn_args['skia_use_dng_sdk'] = False    # RAW image handling.
-    gn_args['skia_use_sfntly'] = False     # PDF handling depedency.
-    gn_args['skia_enable_pdf'] = False     # PDF handling.
-    gn_args['skia_use_expat'] = args.target_os == 'android'
-    gn_args['skia_use_fontconfig'] = False # Use the custom font manager instead.
-    gn_args['is_official_build'] = True    # Disable Skia test utilities.
+    # gn_args['skia_enable_flutter_defines'] = True # Enable Flutter API guards in Skia.
+    # gn_args['skia_use_dng_sdk'] = False    # RAW image handling.
+    # gn_args['skia_use_sfntly'] = False     # PDF handling depedency.
+    # gn_args['skia_enable_pdf'] = False     # PDF handling.
+    # gn_args['skia_use_expat'] = args.target_os == 'android'
+    # gn_args['skia_use_fontconfig'] = False # Use the custom font manager instead.
+    # gn_args['is_official_build'] = True    # Disable Skia test utilities.
 
     gn_args['is_debug'] = args.unoptimized
     gn_args['android_full_debug'] = args.target_os == 'android' and args.unoptimized
@@ -165,8 +165,8 @@ def to_gn_args(args):
     if target_is_32_bit:
       gn_args["host_cpu"] = "x86"
 
-    gn_args['flutter_runtime_mode'] = runtime_mode
-    gn_args['flutter_aot'] = aot
+    # gn_args['flutter_runtime_mode'] = runtime_mode
+    # gn_args['flutter_aot'] = aot
 
     if args.target_sysroot:
       gn_args['target_sysroot'] = args.target_sysroot
@@ -190,8 +190,8 @@ def to_gn_args(args):
       # Enable vulkan in the Flutter shell.
       gn_args['shell_enable_vulkan'] = True
       # Configure Skia for Vulkan support.
-      gn_args['skia_use_vulkan'] = True
-      gn_args['skia_vulkan_header'] = "flutter/vulkan/skia_vulkan_header.h"
+      # gn_args['skia_use_vulkan'] = True
+      # gn_args['skia_vulkan_header'] = "flutter/vulkan/skia_vulkan_header.h"
 
     # We should not need a special case for x86, but this seems to introduce text relocations
     # even with -fPIC everywhere.

@@ -5,7 +5,12 @@
 import("config.gni")
 
 config("mutual_binding_config") {
+  defines = feature_defines_list
 }
 
 source_set("common") {
+  public_configs = [
+    ":mutual_binding_config",
+    "$mutual_binding_root:config",
+  ]
 }

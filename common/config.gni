@@ -4,3 +4,26 @@
 
 # This file intents to configure the common args and definitions for
 # the project.
+
+if (is_android) {
+  import("//build/config/android/config.gni")
+}
+
+if (target_cpu == "arm" || target_cpu == "arm64") {
+  import("//build/config/arm.gni")
+}
+
+declare_args() {
+  mutual_binding_aot = false
+  mutual_binding_runtime_mode = "debug"
+}
+
+feature_defines_list = [
+  "MBINDING_RUNTIME_MODE_DEBUG=1",
+  "MBINDING_RUNTIME_MODE_PROFILE=2",
+  "MBINDING_RUNTIME_MODE_RELEASE=3",
+  "MBINDING_RUNTIME_MODE_DYNAMIC_PROFILE=4",
+  "MBINDING_RUNTIME_MODE_DYNAMIC_RELEASE=5",
+]
+
+feature_defines_list += [ "MBINDING_RUNTIME_MODE=0" ]
