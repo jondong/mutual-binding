@@ -47,4 +47,11 @@ hooks = [
     'cwd': 'src/',
     'action': ['python', 'src/tools/dart/update.py'],
   },
+  {
+    'name': 'download_android_tools',
+    'pattern': '.',
+    'action': [
+      'python', 'src/tools/android/download_android_tools.py',
+    ],
+  },
 ]
