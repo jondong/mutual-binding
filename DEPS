@@ -12,10 +12,16 @@ vars = {
   'dart_revision': '08f59e5de',
   'tonic_revision': '57d508b12',
   'dart_dartdoc_tag': 'v0.20.2',
-  'dart_crypto_tag': '2.0.6',
   'dart_boringssl_gen_rev': 'fc47eaa1a2',
   'dart_boringssl_rev': '189270cd190',
   'dart_observatory_pub_packages_rev': '089412217',
+  'dart_package_config_tag': '1.0.5',
+  'dart_source_span_tag': '1.4.1',
+  'dart_charcode_tag': 'v1.1.2',
+  'dart_path_tag': '1.6.2',
+  'dart_dart2js_info_tag': '0.5.6+4',
+  'dart_collection_tag': '1.14.11',
+  'dart_args_tag': '1.4.4',
 }
 
 allowed_hosts = [
@@ -35,7 +41,13 @@ deps = {
   'src/third_party/boringssl/src': 'https://boringssl.googlesource.com/boringssl.git' + '@' + Var('dart_boringssl_rev'),
   'src/third_party/dart/third_party/observatory_pub_packages': Var('dart_git') + '/observatory_pub_packages.git' + '@' + Var('dart_observatory_pub_packages_rev'),
   'src/third_party/dart/third_party/pkg/dartdoc': Var('dart_git') + '/dartdoc.git' + '@' + Var('dart_dartdoc_tag'),
-  'src/third_party/dart/third_party/pkg/crypto.git': Var('dart_git') + '/crypto.git' + '@' + Var('dart_crypto_tag'),
+  'src/third_party/dart/third_party/pkg/source_span': Var('dart_git') + '/source_span.git' + '@' + Var('dart_source_span_tag'),
+  'src/third_party/dart/third_party/pkg/charcode': Var('dart_git') + '/charcode.git' + '@' + Var('dart_charcode_tag'),
+  'src/third_party/dart/third_party/pkg/path': Var('dart_git') + '/path.git' + '@' + Var('dart_path_tag'),
+  'src/third_party/dart/third_party/pkg/dart2js_info': Var('dart_git') + '/dart2js_info.git' + '@' + Var('dart_dart2js_info_tag'),
+  'src/third_party/dart/third_party/pkg/collection': Var('dart_git') + '/collection.git' + '@' + Var('dart_collection_tag'),
+  'src/third_party/dart/third_party/pkg/args': Var('dart_git') + '/args.git' + '@' + Var('dart_args_tag'),
+  'src/third_party/dart/third_party/pkg_tested/package_config': Var('dart_git') + '/package_config.git' + '@' + Var('dart_package_config_tag'),
 }
 
 recursedeps = [
