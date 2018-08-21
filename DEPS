@@ -5,11 +5,11 @@ vars = {
   'github_jondong': 'https://github.com/jondong',
 
   # Revisions
-  'buildroot_revision': 'd436c65',
+  'buildroot_revision': '5b916c3',
   'buildtool_revision': 'ae8541069',
   'gyp_revision': '4801a5331a',
-  'v8_revision': '022206d5',
-  'dart_revision': '08f59e5de',
+  'v8_revision': 'a3d090986',
+  'dart_revision': 'c0e14e3',
   'tonic_revision': '57d508b12',
   'dart_dartdoc_tag': 'v0.20.2',
   'dart_boringssl_gen_rev': 'fc47eaa1a2',
@@ -34,7 +34,7 @@ deps = {
   'src': Var('github_jondong') + '/buildroot.git' + '@' + Var('buildroot_revision'),
   'src/buildtools': Var('fuchsia_git') + '/buildtools' + '@' + Var('buildtool_revision'),
   'src/third_party/gyp': Var('chromium_git') + '/external/gyp.git' + '@' + Var('gyp_revision'),
-  'src/third_party/v8': Var('chromium_git') + '/v8/v8' + '@' + Var('v8_revision'),
+  'src/v8': Var('chromium_git') + '/v8/v8' + '@' + Var('v8_revision'),
   'src/third_party/dart': Var('dart_git') + '/sdk.git' + '@' + Var('dart_revision'),
   'src/third_party/tonic': Var('fuchsia_git') + '/tonic' + '@' + Var('tonic_revision'),
   'src/third_party/boringssl': 'https://github.com/dart-lang/boringssl_gen.git' + '@' + Var('dart_boringssl_gen_rev'),
@@ -48,10 +48,16 @@ deps = {
   'src/third_party/dart/third_party/pkg/collection': Var('dart_git') + '/collection.git' + '@' + Var('dart_collection_tag'),
   'src/third_party/dart/third_party/pkg/args': Var('dart_git') + '/args.git' + '@' + Var('dart_args_tag'),
   'src/third_party/dart/third_party/pkg_tested/package_config': Var('dart_git') + '/package_config.git' + '@' + Var('dart_package_config_tag'),
+  'src/third_party/icu': Var('chromium_git') + '/chromium/deps/icu.git' + '@' + '297a4dd02b9d36c92ab9b4f121e433c9c3bc14f8',
 }
 
 recursedeps = [
   'src/buildtools',
+]
+
+skip_child_includes = [
+  'out',
+  'v8',
 ]
 
 hooks = [

@@ -3,12 +3,15 @@
 # found in the LICENSE file.
 
 import ("$mutual_binding_root/common/config.gni")
+import ("//v8/gni/v8.gni")
+import ("//v8/snapshot_toolchain.gni")
 
 group("mutual-binding") {
   testonly = true
 
   public_deps = [
     "//third_party/dart:runtime",
+    "//v8:gn_all",
   ]
 }
 
