@@ -5,7 +5,7 @@ vars = {
   'github_jondong': 'https://github.com/jondong',
 
   # Revisions
-  'buildroot_revision': '5b916c3',
+  'buildroot_revision': '7feacaa',
   'buildtool_revision': 'ae8541069',
   'gyp_revision': '4801a5331a',
   'v8_revision': 'a3d090986',
@@ -36,7 +36,7 @@ deps = {
   'src/buildtools': Var('fuchsia_git') + '/buildtools' + '@' + Var('buildtool_revision'),
   'src/third_party/gyp': Var('chromium_git') + '/external/gyp.git' + '@' + Var('gyp_revision'),
   'src/v8': Var('chromium_git') + '/v8/v8' + '@' + Var('v8_revision'),
-  'src/v8/third_party/googletest/src': Var('chromium_git') + '/external/github.com/google/googletest.git' + '@' + Var('googletest_revision'),
+  'src/third_party/googletest/src': Var('chromium_git') + '/external/github.com/google/googletest.git' + '@' + Var('googletest_revision'),
   'src/third_party/dart': Var('dart_git') + '/sdk.git' + '@' + Var('dart_revision'),
   'src/third_party/tonic': Var('fuchsia_git') + '/tonic' + '@' + Var('tonic_revision'),
   'src/third_party/boringssl': 'https://github.com/dart-lang/boringssl_gen.git' + '@' + Var('dart_boringssl_gen_rev'),
