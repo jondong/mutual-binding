@@ -17,4 +17,9 @@ group("mutual-binding") {
 
 config("config") {
   include_dirs = [".."]
+
+  if ((current_cpu == "arm" || current_cpu == "arm64") && is_android && is_clang) {
+    import("//build/config/android/config.gni")
+    include_dirs += [ "$android_ndk_include_dir" ]
+  }
 }
